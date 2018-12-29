@@ -122,6 +122,7 @@ GameObject:
   m_Component:
   - component: {fileID: 175603754}
   - component: {fileID: 175603753}
+  - component: {fileID: 175603755}
   m_Layer: 0
   m_Name: RightWall
   m_TagString: Untagged
@@ -139,7 +140,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -169,6 +170,18 @@ Transform:
   m_Father: {fileID: 2146083796}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &175603755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 175603752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a9d87c8c13cb43b8aaf21d97ad211cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &420918201
 GameObject:
   m_ObjectHideFlags: 0
@@ -735,6 +748,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1622850854}
   - component: {fileID: 1622850853}
+  - component: {fileID: 1622850855}
   m_Layer: 0
   m_Name: LeftWall
   m_TagString: Untagged
@@ -752,7 +766,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -782,6 +796,18 @@ Transform:
   m_Father: {fileID: 2146083796}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1622850855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1622850852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a9d87c8c13cb43b8aaf21d97ad211cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2146083794
 GameObject:
   m_ObjectHideFlags: 0
@@ -849,6 +875,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 767e9f4551bf143d09ded3db4dc789ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  skin: {fileID: 11400000, guid: d5d427e4d9b434d3e84fd963c0032d68, type: 2}
 --- !u!1001 &573113458295583233
 PrefabInstance:
   m_ObjectHideFlags: 0

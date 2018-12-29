@@ -6,6 +6,9 @@ public class GameManager : MonoBehaviour
 {
     private static int player1Score;
     private static int player2Score;
+
+    public GUISkin skin;
+
     public static int Player1Score
     {
         get
@@ -38,6 +41,7 @@ public class GameManager : MonoBehaviour
 
     void OnGUI()
     {
-        GUI.Label(new Rect(Screen.width/2-2, 20, 100, 100), $"{player1Score}:{player2Score}");
+        GUI.skin = skin;
+        GUI.Label(new Rect(Screen.width/2-25, 20, 100, 100), $"{player1Score}:{player2Score}");
     }
 }
