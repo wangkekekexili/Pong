@@ -5,10 +5,12 @@ using UnityEngine;
 public class BallControl : MonoBehaviour
 {
     private Rigidbody2D _rigidbody2D;
+    private AudioSource _audio;
 
     private void Awake()
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();
+        _audio = GetComponent<AudioSource>();
         Random.InitState(System.DateTimeOffset.Now.Millisecond);
     }
 
@@ -51,7 +53,8 @@ public class BallControl : MonoBehaviour
             //velY = velY / 2 + collision.collider.attachedRigidbody.velocity.y / 3;
             //_rigidbody2D.velocity = new Vector2(_rigidbody2D.velocity.x, velY);
 
-            GetComponent<AudioSource>().Play();
+            _audio.pitch = Random.Range(0.75f, 1f);
+            _audio.Play();
         }
     }
 }
