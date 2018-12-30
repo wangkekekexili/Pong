@@ -6,12 +6,28 @@ public class BallControl : MonoBehaviour
 {
     private Rigidbody2D _rigidbody2D;
 
+    private void Awake()
+    {
+        _rigidbody2D = GetComponent<Rigidbody2D>();
+        Random.InitState(System.DateTimeOffset.Now.Millisecond);
+    }
+
     // Start is called before the first frame update
     void Start()
     {
-        _rigidbody2D = GetComponent<Rigidbody2D>();
+        Invoke("goBall", 2);
+    }
 
-        Random.InitState(System.DateTimeOffset.Now.Millisecond);
+    private void resetBall()
+    {
+        _rigidbody2D.velocity = new Vector2(0, 0);
+        var t = GetComponent<Transform>();
+        t.position = new Vector3(0, 0, 0);
+        Invoke("goBall", 0.5f);
+    }
+
+    private void goBall()
+    {
         var randomNumber = Random.Range(0f, 1f);
         if (randomNumber <= 0.5)
         {
@@ -25,6 +41,7 @@ public class BallControl : MonoBehaviour
         }
     }
 
+
     // Update is called once per frame
     void OnCollisionEnter2D(Collision2D collision)
     {
@@ -33,6 +50,8 @@ public class BallControl : MonoBehaviour
             //var velY = _rigidbody2D.velocity.y;
             //velY = velY / 2 + collision.collider.attachedRigidbody.velocity.y / 3;
             //_rigidbody2D.velocity = new Vector2(_rigidbody2D.velocity.x, velY);
+
+            GetComponent<AudioSource>().Play();
         }
     }
 }

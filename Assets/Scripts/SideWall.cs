@@ -12,5 +12,6 @@ public class SideWall : MonoBehaviour
         }
         var wallName = GetComponent<Transform>().name;
         GameManager.Score(wallName);
+        collision.gameObject.SendMessage("resetBall");
     }
 }
