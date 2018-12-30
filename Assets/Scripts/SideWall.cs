@@ -10,6 +10,7 @@ public class SideWall : MonoBehaviour
         {
             return;
         }
+        GetComponent<AudioSource>().Play();
         var wallName = GetComponent<Transform>().name;
         GameManager.Score(wallName);
         collision.gameObject.SendMessage("resetBall");
